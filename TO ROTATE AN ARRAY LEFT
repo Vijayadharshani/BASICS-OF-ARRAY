@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int i,n,j,t,k;
+    scanf("%d",&n);//enter the size of the array
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);//enter the elements
+    }
+    scanf("%d",&j);//enter how many times rotation has to takes place
+    for(i=1;i<=j;i++)
+    {
+        t=a[0];
+        for(k=0;k<n-1;k++)
+        {
+            a[k]=a[k+1];
+        }
+        a[n-1]=t;
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%d",a[i]);
+    }
+    return 0;
+}
